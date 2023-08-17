@@ -24,14 +24,7 @@ function App() {
   //}
   return (
     <div className="container">
-      <MyComponent click={() => 
-        
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${apiKey}`)
-        .then(response => response.json()) 
-        .then(data => {
-          setWeatherData(data)
-        setCity("")
-       })} />
+      
 
 
         
@@ -40,8 +33,18 @@ function App() {
        placeholder="Enter City..."
        onChange={e => setCity(e.target.value)}
        value={city}
-       onKeyPress={getWeather}
+       //onKeyPress={getWeather}
        />
+
+       <MyComponent click={() => 
+        
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${apiKey}`)
+        .then(response => response.json()) 
+        .then(data => {
+          setWeatherData(data)
+        setCity("")
+       })} />
+
 
      {typeof weatherData.main === 'undefined' ? (
       <div>
