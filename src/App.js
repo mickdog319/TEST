@@ -11,8 +11,11 @@ function App() {
     if (event.key == "Enter")
         fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${apiKey}`)
       .then(response => response.json()) 
-      .then(data => {setWeatherData(data)})
+      .then(data => {
+        setWeatherData(data)
       setCity("")
+     }
+    )
   }
 
   return (
@@ -22,12 +25,32 @@ function App() {
        placeholder="Enter City..."
        onChange={e => setCity(e.target.value)}
        value={city}
-       onKeypress={getWeather}
+       onKeyPress={getWeather}
        />
 
-     
+     {typeof weatherData.main === 'undefined' ? (
+      <div>
+        <p> Welcome To Weather Stock Picker!</p>
+        <p> Type in a city and your stock pick</p>
+        <p> to have predected if you should buy the stock</p>
+         </div>
+  ):(
+    <div className='weather-data'>
+      <p className='city'>{weatherData.name}</p>
+      <p className='temp'>{Math.round(weatherData.main.temp)}°F</p>
+      <p className='weather'>{weatherData.weather[0].main}</p>
     </div>
-  );
+  )
 }
+</div>
+  )}
 
-export default App;
+  {weatherData.cod === "404" ? (
+    <p>City not found.</p>
+  ):(
+    <>
+    </>
+
+  
+    )}
+export default App

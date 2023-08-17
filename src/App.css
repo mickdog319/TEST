@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: center;
   align-items: left;
   padding: 25px;
 }
@@ -9,8 +9,34 @@
 .input{
   padding: 15px;
   width: 20%;
-  margin: auto;
-  border: 2px solid lightgray;
+  margin: left;
+  border: 2px solid rgb(101, 8, 8);
   border-radius: 6px;
   font-size: 16px;
+}
+.weather-data {
+  margin-top: 10px;
+  margin-left: 80px;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  
+}
+.city{
+  font-size: 30px;
+  border: 1px solid lightgray;
+  font-weight: 100;
+}
+.temp{
+  font-size: 40px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+}
+.weather {
+  font-size: 30px;
+  font-weight: 200;
+  border: 1px solid lightgray;
+  border-radius: 12px;
 }
