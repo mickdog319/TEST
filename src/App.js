@@ -31,8 +31,8 @@ function App() {
      {typeof weatherData.main === 'undefined' ? (
       <div>
         <p> Welcome To Weather Stock Picker!</p>
-        <p> Type in a city and your stock pick</p>
-        <p> to have predected if you should buy the stock</p>
+        <p> Make sure you spell the city correctly</p>
+        
          </div>
   ):(
     <div className='weather-data'>
@@ -44,10 +44,10 @@ function App() {
 </div>
   )}
     
- {weatherData.cod == "404" ? (
+ /*{weatherData.cod === "404" ? (
     <p>City not found</p>
   ):(
   <></>
     
-    )}
+    )}*/
 export default App
