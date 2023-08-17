@@ -1,3 +1,12 @@
+.MyComponent {
+  font-size: 40px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+
+}
+
+
 .container {
   display: flex;
   flex-direction: column;

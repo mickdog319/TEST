@@ -33,8 +33,8 @@ function App() {
        placeholder="Enter City and click the 'Click Me'..."
        onChange={e => setCity(e.target.value)}
        value={city}
-       //onKeyPress={getWeather}
-       />
+       ></input>
+       
 
        <MyComponent click={() => 
         
