@@ -19,7 +19,9 @@ function App() {
      }
     )
   }
-
+  const click = (event) => {
+    alert('clicked')
+  }
   return (
     <div className="container">
        <input 
