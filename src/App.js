@@ -19,12 +19,12 @@ function App() {
      }
     )
   }
-  const click = (event) => {
-    alert('clicked')
-  }
+  //const click = (event) => {
+    //alert('clicked')
+  //}
   return (
     <div className="container">
-      <MyComponent click={this.click} />
+      <MyComponent click={() => alert('yes')} />
        <input 
        className="input" 
        placeholder="Enter City..."
