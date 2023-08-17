@@ -44,12 +44,13 @@ function App() {
 }
 </div>
   )}
-
-  {weatherData.cod === "404" ? (
-    <p>City not found.</p>
+    
+  {weatherData.cod === '404' ? (
+    <p>City not found</p>
   ):(
-    <>
-    </>
+  <p></p>
+
+    
 
   
     )}
