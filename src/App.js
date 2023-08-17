@@ -40,18 +40,14 @@ function App() {
       <p className='temp'>{Math.round(weatherData.main.temp)}°F</p>
       <p className='weather'>{weatherData.weather[0].main}</p>
     </div>
-  )
-}
+  )}
 </div>
   )}
     
-  {weatherData.cod === '404' ? (
+ /*{weatherData.cod == "404" ? (
     <p>City not found</p>
   ):(
-  <p></p>
-
+  <></>
     
-
-  
-    )}
+    )}*/
 export default App
