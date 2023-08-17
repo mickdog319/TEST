@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 
 function App() {
+
+  const MyComponent = (props) => (<p onClick={props.click}>Click Me</p>)
   
   const apiKey = '4f25502ce67ce21c020ffe855e56ed5b'
   const [weatherData, setWeatherData] = useState([{}])
@@ -25,13 +27,14 @@ function App() {
        placeholder="Enter City..."
        onChange={e => setCity(e.target.value)}
        value={city}
-       onKeyPress={getWeather}
+       //onKeyPress={getWeather}
        />
 
      {typeof weatherData.main === 'undefined' ? (
       <div>
         <p> Welcome To Weather Stock Picker!</p>
         <p> Make sure you spell the city correctly</p>
+        <p><MyComponent click={this.click} /></p>
         
          </div>
   ):(
