@@ -30,7 +30,7 @@ function App() {
         
        <input 
        className="input" 
-       placeholder="Enter City..."
+       placeholder="Enter City and click the 'Click Me'..."
        onChange={e => setCity(e.target.value)}
        value={city}
        //onKeyPress={getWeather}
