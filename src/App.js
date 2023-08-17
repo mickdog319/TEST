@@ -24,7 +24,17 @@ function App() {
   //}
   return (
     <div className="container">
-      <MyComponent click={() => alert('yes')} />
+      <MyComponent click={() => 
+        
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${apiKey}`)
+        .then(response => response.json()) 
+        .then(data => {
+          setWeatherData(data)
+        setCity("")
+       })} />
+
+
+        
        <input 
        className="input" 
        placeholder="Enter City..."
