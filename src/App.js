@@ -25,7 +25,7 @@ function App() {
        placeholder="Enter City..."
        onChange={e => setCity(e.target.value)}
        value={city}
-       onKeyPress={getWeather}
+       onKeyDown={getWeather}
        />
 
      {typeof weatherData.main === 'undefined' ? (
@@ -44,10 +44,10 @@ function App() {
 </div>
   )}
     
- /*{weatherData.cod == "404" ? (
+ {weatherData.cod == "404" ? (
     <p>City not found</p>
   ):(
   <></>
     
-    )}*/
+    )}
 export default App
