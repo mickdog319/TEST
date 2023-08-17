@@ -24,19 +24,20 @@ function App() {
   }
   return (
     <div className="container">
+      <MyComponent click={this.click} />
        <input 
        className="input" 
        placeholder="Enter City..."
        onChange={e => setCity(e.target.value)}
        value={city}
-       //onKeyPress={getWeather}
+       onKeyPress={getWeather}
        />
 
      {typeof weatherData.main === 'undefined' ? (
       <div>
         <p> Welcome To Weather Stock Picker!</p>
         <p> Make sure you spell the city correctly</p>
-        <p><MyComponent click={this.click} /></p>
+        
         
          </div>
   ):(
