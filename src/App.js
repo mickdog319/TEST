@@ -25,7 +25,7 @@ function App() {
        placeholder="Enter City..."
        onChange={e => setCity(e.target.value)}
        value={city}
-       onKeyPress={getWeather}
+       KeyPress={getWeather}
        />
 
      {typeof weatherData.main === 'undefined' ? (
