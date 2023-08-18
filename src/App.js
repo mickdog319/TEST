@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Stock from './Stock';
 import './App.css';
 
 function App() {
@@ -63,10 +64,17 @@ function App() {
 </div>
   )}
     
- /*{weatherData.cod === "404" ? (
-    <p>City not found</p>
-  ):(
-  <></>
-    
-    )}*/
+
+  // From Stocks App.js
+
+  function App() {
+    return (
+      <div className="App">
+        <Stock></Stock>
+        
+      </div>
+    );
+  }
+  
+
 export default App
