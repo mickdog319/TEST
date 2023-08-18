@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Stock from './Stock';
 import './App.css';
 
-function Apps() {
+function App() {
 
   const MyComponent = (props) => (<p onClick={props.click}>Click Me</p>)
   
@@ -28,7 +28,7 @@ function Apps() {
               
        <input 
        className="input" 
-       placeholder="Enter City and click the 'Click Me'..."
+       placeholder="Enter City, Click the 'Click Me'..."
        onChange={e => setCity(e.target.value)}
        value={city}
        ></input>
@@ -64,9 +64,9 @@ function Apps() {
 
   // From Stocks App.js
 
-  function App() {
+  function SApp() {
     return (
-      <div className="App">
+      <div className="SApp">
         <Stock></Stock>
         
       </div>

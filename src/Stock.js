@@ -28,6 +28,7 @@ class Stock extends React.Component {
                 return response.json();
             }
         )
+
         .then(
             function(data) {
                 console.log(data);
