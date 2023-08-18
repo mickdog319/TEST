@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Stock from './Stock';
 import './App.css';
 
-function App() {
+function Apps() {
 
   const MyComponent = (props) => (<p onClick={props.click}>Click Me</p>)
   
@@ -25,10 +25,7 @@ function App() {
   //}
   return (
     <div className="container">
-      
-
-
-        
+              
        <input 
        className="input" 
        placeholder="Enter City and click the 'Click Me'..."
