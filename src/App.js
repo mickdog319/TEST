@@ -1,18 +1,23 @@
 import React, {useState} from 'react';
 import './App.css';
 
+
+
 function App() {
 
-  const MyComponent = (props) => (<p onClick={props.click}>Click Me</p>)
+  
+  const MyComponent = (props) => (<h1><button onClick={props.click}>Click for Your Weather Based Stock Prediction!</button></h1>)
+ // const tmp = 50
+
+  
   
   const apiKey = '4f25502ce67ce21c020ffe855e56ed5b'
   const [weatherData, setWeatherData] = useState([{}]);
   const [city, setCity] = useState("Dallas");
   
-  const [stock, setStock] = useState("IBM");  
+  const [stock, setStock] = useState("");  
   const [openstock, setOpenstock] = useState("")
   
-
   function fetchStock(){
     const API_KEY = 'T9YF0ECIYKXDFK4V';
     const StockSymbol = stock;
@@ -23,38 +28,18 @@ function App() {
             return response.json();
         }
             )
-
-    .then(
+  .then(
         function(data) {
             
-            
-           // var keys = data['Time Series (Daily)'];
-
-           
-            
             for (var key in data['Time Series (Daily)']) {
-              //alert(data['Time Series (Daily)'][key]['1. open']);
-              setOpenstock( data['Time Series (Daily)'][key]['1. open']);
-              //alert(openstock);
-              break;
+               setOpenstock( data['Time Series (Daily)'][key]['1. open']);
+ 
+             // break;
             }
-           // alert(openstock);
-            //console.log('price', openstock);
-           // setStock("");
-            //setWeatherData("");
-            //setCity("");
-              
         }
     )
-
-    
 }
 
-
-
-
-
-  
   return (
     <div className="container">
         <div>      
@@ -72,13 +57,7 @@ function App() {
        onChange={f => setStock(f.target.value)}
        value={stock}
        ></input>
-
-       
-
-
         </div>
-
-
 
        <MyComponent click={() => 
         
@@ -88,44 +67,42 @@ function App() {
           setWeatherData(data)
         setCity("")
        }).then(fetchStock())
-       //.then(ret => setOpenstock(ret))
-       //.then (alert(openstock))
+      
        
        } />
 
-
+       
      {typeof weatherData.main === 'undefined' ? (
       <div>
         <p> Welcome To Weather Stock Picker!</p>
-        <p> Check Spelling ! </p>
-        
-        
+        <p> Remember, Check Your Spelling ! </p>
          </div>
-  ):(
+         
+
+     
+
+
+):(
     <div className='weather-data'>
+
       <p className='city'>{weatherData.name}</p>
-      <p className='temp'>{Math.round(weatherData.main.temp)}°F</p>
+      <p className='temp'>{Math.round(weatherData.main.temp)}°F </p>
       <p className='weather'>{weatherData.weather[0].main}</p>
     
-      
-      
+    
+       
+    
+
+    
+    
     </div>
-    
   )}
-    
       <div className='stock-data'> 
             <p className='stock'>{stock}</p>
             <p className='openstock'>{openstock}</p>
-
       </div>
-    
-
 </div>
-
-
   )}
-    
-
-  
-
 export default App
+
+

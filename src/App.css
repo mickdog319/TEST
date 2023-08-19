@@ -2,8 +2,7 @@
   font-size: 140px;
   padding: 10px;
   border: 12px solid rgb(152, 243, 6);
-  border-radius: 132px;
-
+  border-radius: 32px;
 }
 
 
@@ -14,7 +13,6 @@
   border: 4px solid rgb(101, 8, 8);
   border-radius: 6px;
   font-size: 16px;}
-
 
 .container {
   display: flex; 
@@ -77,6 +75,7 @@
 
 .stock{
   font-size: 30px;
+  width: 20%;
   padding: 1px;
   border: 1px solid rgb(172, 10, 10);
   font-weight: 80;
@@ -85,7 +84,7 @@
 
 .openstock{
   font-size: 20px;
-  
+  width: 20%;
   border: 1px solid rgb(197, 33, 197);
   font-weight: 80; 
   border-radius: 12px;
