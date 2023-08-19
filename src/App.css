@@ -1,7 +1,7 @@
 .MyComponent {
   font-size: 140px;
   padding: 10px;
-  border: 12px solid lightgray;
+  border: 12px solid rgb(152, 243, 6);
   border-radius: 132px;
 
 }
@@ -17,11 +17,11 @@
 
 
 .container {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  padding: 375px;
+  padding: 175px;
 }
 
 .input{
@@ -41,48 +41,52 @@
   align-items: left;
   
 }
+
 .city{
   font-size: 30px;
-  border: 1px solid lightgray;
+  padding: 1px;
+  border: 1px solid rgb(221, 139, 16);
   font-weight: 100;
+  border-radius: 12px;
 }
 .temp{
   font-size: 40px;
-  padding: 10px;
-  border: 1px solid lightgray;
+  padding: 1px;
+  border: 1px solid rgb(54, 155, 238);
   border-radius: 12px;
 }
 .weather {
   font-size: 30px;
-  font-weight: 200;
-  border: 1px solid lightgray;
+  padding: 1px;
+  font-weight: 80;
+  border: 1px solid rgb(199, 226, 42);
   border-radius: 12px;
 
 }
 
 
-.stock-data {
-  margin-top: 10px;
-  margin-left: 390px;
-  width: 10%;
+/*.stock-data {
+  margin-top: 1px;
+  margin-left: 90px;
+  width: 50%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: right;
   
-}
-
-.openstock{
-  font-size: 30px;
-  border: 1px solid rgb(20, 192, 49);
-  font-weight: 80; 
-  border-radius: 12px;
-}
-
+}*/
 
 .stock{
   font-size: 30px;
-  border: 5px solid rgb(172, 10, 10);
+  padding: 1px;
+  border: 1px solid rgb(172, 10, 10);
   font-weight: 80;
   border-radius: 12px;
 }
 
+.openstock{
+  font-size: 20px;
+  
+  border: 1px solid rgb(197, 33, 197);
+  font-weight: 80; 
+  border-radius: 12px;
+}

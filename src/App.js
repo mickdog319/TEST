@@ -8,10 +8,10 @@ function App() {
   
   const apiKey = '4f25502ce67ce21c020ffe855e56ed5b'
   const [weatherData, setWeatherData] = useState([{}]);
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Dallas");
   
-  const [stock, setStock] = useState("");  
-  const [price, setPrice] = useState("")
+  const [stock, setStock] = useState("IBM");  
+  //const [openstock, setOpenstock] = useState("")
   
   let openstock; 
 
@@ -55,7 +55,10 @@ function App() {
               break;
             }
             alert(openstock);
+            //console.log('price', openstock);
             setStock("");
+            //setWeatherData("");
+            //setCity("");
               
         }
     )
@@ -86,12 +89,7 @@ function App() {
        value={stock}
        ></input>
 
-       <input 
-       className="openstock" 
-       placeholder=""
-       onChange={g => openstock(g.target.value)}
-       value={openstock}
-       ></input>
+       
 
 
         </div>
@@ -129,7 +127,7 @@ function App() {
     
       <div className='stock-data'> 
             <p className='stock'>{stock}</p>
-            <p className='price'>{openstock}</p>
+            <p className='openstock'>{openstock}</p>
 
       </div>
     
