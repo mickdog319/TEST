@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Stock from './Stock';
+//import Stock from './Stock';
 import './App.css';
 
 function App() {
@@ -24,28 +24,29 @@ function App() {
     const API_KEY = 'T9YF0ECIYKXDFK4V';
     const StockSymbol = stock;
     let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY}`;
-    let stockChartXValuesFunction = [];
-    let stockChartYValuesFunction = [];
+    //let stockChartXValuesFunction = [];
+    //let stockChartYValuesFunction = [];
     fetch(API_Call)
     .then(
         function(response) {
             return response.json();
         }
-            .then(data => {
+            //.then(data => {
 
               //  was set to stock, setStock
-              price(data)
-            setPrice("")
-            })
+             // price(data)
+           // setPrice("")
+            //}
+            )
           
           
-    )
+    
 
     .then(
         function(data) {
             
             
-            var keys = data['Time Series (Daily)'];
+           // var keys = data['Time Series (Daily)'];
 
            
             
@@ -84,6 +85,15 @@ function App() {
        onChange={f => setStock(f.target.value)}
        value={stock}
        ></input>
+
+       <input 
+       className="openstock" 
+       placeholder=""
+       onChange={g => openstock(g.target.value)}
+       value={openstock}
+       ></input>
+
+
         </div>
 
 
@@ -101,7 +111,7 @@ function App() {
      {typeof weatherData.main === 'undefined' ? (
       <div>
         <p> Welcome To Weather Stock Picker!</p>
-        <p> Make sure you spell the city correctly</p>
+        <p> Check Spelling ! </p>
         
         
          </div>
