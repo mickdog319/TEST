@@ -1,10 +1,19 @@
 .MyComponent {
-  font-size: 40px;
+  font-size: 140px;
   padding: 10px;
-  border: 1px solid lightgray;
-  border-radius: 12px;
+  border: 12px solid lightgray;
+  border-radius: 132px;
 
 }
+
+
+.inputStock {
+  padding: 15px;
+  width: 20%;
+  margin: left;
+  border: 4px solid rgb(101, 8, 8);
+  border-radius: 6px;
+  font-size: 16px;}
 
 
 .container {
@@ -12,20 +21,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  padding: 25px;
+  padding: 275px;
 }
 
 .input{
   padding: 15px;
   width: 20%;
   margin: left;
-  border: 2px solid rgb(101, 8, 8);
-  border-radius: 6px;
+  border: 4px solid rgb(101, 8, 8);
+  border-radius: 2px;
   font-size: 16px;
 }
 .weather-data {
   margin-top: 10px;
-  margin-left: 80px;
+  margin-left: 90px;
   width: 10%;
   display: flex;
   flex-direction: column;
@@ -52,93 +61,24 @@
 }
 
 
-
-
-
-
-
-
-
-
-.SApp {
-  text-align: center;
-}
-
-.SApp-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .SApp-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.SApp-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.stock-data {
+  margin-top: 10px;
+  margin-left: 290px;
+  width: 10%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: right;
+  
 }
 
-.SApp-link {
-  color: #61dafb;
+.stock{
+  font-size: 30px;
+  border: 5px solid rgb(172, 10, 10);
+  font-weight: 80;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-
-
-
-
-.SApp {
-  text-align: center;
-}
-
-.SApp-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .SApp-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.SApp-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.SApp-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.price{
+  font-size: 30px;
+  border: 1px solid rgb(30, 32, 184);
+  font-weight: 80;
 }
