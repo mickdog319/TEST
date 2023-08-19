@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-//import Stock from './Stock';
 import './App.css';
 
 function App() {
@@ -11,36 +10,19 @@ function App() {
   const [city, setCity] = useState("Dallas");
   
   const [stock, setStock] = useState("IBM");  
-  //const [openstock, setOpenstock] = useState("")
+  const [openstock, setOpenstock] = useState("")
   
-  let openstock; 
-
-
-
 
   function fetchStock(){
-    const pointerToThis = this;
-    console.log(pointerToThis);
     const API_KEY = 'T9YF0ECIYKXDFK4V';
     const StockSymbol = stock;
     let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY}`;
-    //let stockChartXValuesFunction = [];
-    //let stockChartYValuesFunction = [];
     fetch(API_Call)
     .then(
         function(response) {
             return response.json();
         }
-            //.then(data => {
-
-              //  was set to stock, setStock
-             // price(data)
-           // setPrice("")
-            //}
             )
-          
-          
-    
 
     .then(
         function(data) {
@@ -51,12 +33,14 @@ function App() {
            
             
             for (var key in data['Time Series (Daily)']) {
-              openstock = data['Time Series (Daily)'][key]['1. open'];
+              //alert(data['Time Series (Daily)'][key]['1. open']);
+              setOpenstock( data['Time Series (Daily)'][key]['1. open']);
+              //alert(openstock);
               break;
             }
-            alert(openstock);
+           // alert(openstock);
             //console.log('price', openstock);
-            setStock("");
+           // setStock("");
             //setWeatherData("");
             //setCity("");
               
@@ -103,7 +87,11 @@ function App() {
         .then(data => {
           setWeatherData(data)
         setCity("")
-       }).then(fetchStock)} />
+       }).then(fetchStock())
+       //.then(ret => setOpenstock(ret))
+       //.then (alert(openstock))
+       
+       } />
 
 
      {typeof weatherData.main === 'undefined' ? (
