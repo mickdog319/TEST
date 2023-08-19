@@ -21,7 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  padding: 275px;
+  padding: 375px;
 }
 
 .input{
@@ -63,22 +63,26 @@
 
 .stock-data {
   margin-top: 10px;
-  margin-left: 290px;
+  margin-left: 390px;
   width: 10%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: right;
   
 }
+
+.openstock{
+  font-size: 30px;
+  border: 1px solid rgb(20, 192, 49);
+  font-weight: 80; 
+  border-radius: 12px;
+}
+
 
 .stock{
   font-size: 30px;
   border: 5px solid rgb(172, 10, 10);
   font-weight: 80;
+  border-radius: 12px;
 }
 
-.price{
-  font-size: 30px;
-  border: 1px solid rgb(30, 32, 184);
-  font-weight: 80;
-}
