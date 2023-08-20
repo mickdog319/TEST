@@ -1,8 +1,8 @@
 .MyComponent {
-  font-size: 140px;
-  padding: 10px;
+  font-size: 40px;
+  padding: 1px;
   border: 12px solid rgb(152, 243, 6);
-  border-radius: 32px;
+  border-radius: 12px;
 }
 
 
@@ -10,7 +10,7 @@
   padding: 15px;
   width: 20%;
   margin: left;
-  border: 4px solid rgb(101, 8, 8);
+  border: 3px solid rgb(101, 8, 8);
   border-radius: 6px;
   font-size: 16px;}
 
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  padding: 175px;
+  padding: 75px;
 }
 
 .input{
@@ -27,7 +27,7 @@
   width: 20%;
   margin: left;
   border: 4px solid rgb(101, 8, 8);
-  border-radius: 2px;
+  border-radius: 6px;
   font-size: 16px;
 }
 .weather-data {
@@ -35,48 +35,48 @@
   margin-left: 90px;
   width: 10%;
   display: flex;
-  flex-direction: column;
-  align-items: left;
+  flex-direction: row;
+  align-items: center;
   
 }
 
 .city{
-  font-size: 30px;
-  padding: 1px;
-  border: 1px solid rgb(221, 139, 16);
+  font-size: 20px;
+  padding: 10px;
+  border: 5px solid rgb(221, 139, 16);
   font-weight: 100;
   border-radius: 12px;
 }
 .temp{
-  font-size: 40px;
-  padding: 1px;
-  border: 1px solid rgb(54, 155, 238);
+  font-size: 20px;
+  padding: 10px;
+  border: 5px solid rgb(54, 155, 238);
   border-radius: 12px;
 }
 .weather {
-  font-size: 30px;
-  padding: 1px;
+  font-size: 20px;
+  padding: 10px;
   font-weight: 80;
-  border: 1px solid rgb(199, 226, 42);
+  border: 5px solid rgb(199, 226, 42);
   border-radius: 12px;
 
 }
 
 
 .stock-data {
-  margin-top: 1px;
+  margin-top: 4px;
   margin-left: 90px;
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: center;
   
 }
 
 .stock{
-  font-size: 30px;
+  font-size: 15px;
   width: 20%;
-  padding: 1px;
+  padding: 10px;
   border: 1px solid rgb(172, 10, 10);
   font-weight: 80;
   border-radius: 12px;
@@ -84,8 +84,15 @@
 
 .openstock{
   font-size: 20px;
+  padding: 10px;
   width: 20%;
-  border: 1px solid rgb(197, 33, 197);
+  border: 1px solid rgb(65, 25, 173);
   font-weight: 80; 
+  border-radius: 12px;
+}
+.prediction{
+  font-size: 25px;
+  padding: 15px;
+  border: 5px solid rgb(14, 212, 47);
   border-radius: 12px;
 }
