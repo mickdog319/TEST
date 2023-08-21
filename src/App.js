@@ -64,8 +64,8 @@ function App() {
        
      {typeof weatherData.main === 'undefined' ? (
       <div>
-        <p> Welcome To Weather Stock Picker!</p>
-        <p> Remember, Check Your Spelling ! </p>
+        <p> Welcome To Weather Stock Picker! Type in any City, try a northern city(cold) and later try a southern city(hot) for the best results.</p>
+        <p> Type in any stock and remember, Check Your Spelling!  Just a few suggestions: IBM, MSFT, AMZN, and AAPL.  </p>
          </div>
 
 ):(
@@ -91,5 +91,3 @@ function App() {
 </div>
   )}
 export default App
-
-
